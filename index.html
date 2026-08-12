@@ -9,22 +9,52 @@
             background-color: darkmagenta;
             color: deeppink;
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 4px solid black;
+            padding: 2px;
         }
         main {
             background-color: blue;
             color: gainsboro;
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            p.autor{
+                font-weight: bold;
+            }
         } 
+        img {
+            width: 80px;
+            height: 80px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>site do 1 b</h1>
-         <p>aprenda a produzir um site</p>
+            <h1>site do 1 b</h1>
+            <p>aprenda a produzir um site</p>
 </header>
 <main>
-          <h2>Exercício de aula do 1 b</h2>    
-          <p> Este è um exercício da aula de educação digital</p>  
+    <img src="imagem.png" alt="imagem da aula de educação digital">
+    <div>
+        <h2>exercício de aula do 1 B </h2>
+        <p class="autor">por: Emily</p>
+        <p> este site é um exercício da aula de educação digital</p>
+        <button>❤️<span>0</span></button>
+        <button>🙄<span>0</span></button>
+    </div> 
     </main>
 </body>
+<script>
+    const botoes = document.querySelector("button");
+    botoes.forEach(function(botao)) {
+        botao.addEventListener ("click", botaoClicado);
+        function botaoClicado () {
+        let texto = botao.querySelecor ("span");
+        texto.textContent++;
+    }
+    }
+</script>
 </html>
